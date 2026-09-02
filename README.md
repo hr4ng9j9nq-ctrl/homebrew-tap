@@ -8,8 +8,13 @@
 
 ```bash
 brew tap hr4ng9j9nq-ctrl/tap
+brew trust hr4ng9j9nq-ctrl/tap
 brew install --cask secretshield
 ```
+
+Средняя строка обязательна: с шестой версии Homebrew не ставит каски из
+сторонних кранов, пока их не доверят явно. Без неё установка вернёт
+`Refusing to load cask ... from untrusted tap`. Доверие выдаётся один раз.
 
 Homebrew ставит приложение без карантина, поэтому поход в System Settings за
 «Открыть всё равно» не понадобится. Обновления приходят обычным
